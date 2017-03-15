@@ -46,13 +46,7 @@ namespace Microsoft.OData.ConnectedService
         {
             BaseCodeGenDescriptor codeGenDescriptor;
 
-            if (edmxVersion == Common.Constants.EdmxVersion1
-                || edmxVersion == Common.Constants.EdmxVersion2
-                || edmxVersion == Common.Constants.EdmxVersion3)
-            {
-                codeGenDescriptor = new V3CodeGenDescriptor(metadataUri, context, project);
-            }
-            else if (edmxVersion == Common.Constants.EdmxVersion4)
+            if (edmxVersion == Common.Constants.EdmxVersion4)
             {
                 codeGenDescriptor = new V4CodeGenDescriptor(metadataUri, context, project);
             }
